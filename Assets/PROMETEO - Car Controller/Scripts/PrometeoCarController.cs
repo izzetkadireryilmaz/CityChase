@@ -119,8 +119,6 @@ public class PrometeoCarController : MonoBehaviour
       PrometeoTouchInput turnRightPTI;
       public GameObject turnLeftButton;
       PrometeoTouchInput turnLeftPTI;
-      public GameObject handbrakeButton;
-      PrometeoTouchInput handbrakePTI;
 
     //CAR DATA
 
@@ -243,14 +241,12 @@ public class PrometeoCarController : MonoBehaviour
 
         if(useTouchControls){
           if(throttleButton != null && reverseButton != null &&
-          turnRightButton != null && turnLeftButton != null
-          && handbrakeButton != null){
+          turnRightButton != null && turnLeftButton != null){
 
             throttlePTI = throttleButton.GetComponent<PrometeoTouchInput>();
             reversePTI = reverseButton.GetComponent<PrometeoTouchInput>();
             turnLeftPTI = turnLeftButton.GetComponent<PrometeoTouchInput>();
             turnRightPTI = turnRightButton.GetComponent<PrometeoTouchInput>();
-            handbrakePTI = handbrakeButton.GetComponent<PrometeoTouchInput>();
             touchControlsSetup = true;
 
           }else{
@@ -306,18 +302,10 @@ public class PrometeoCarController : MonoBehaviour
         if(turnRightPTI.buttonPressed){
           TurnRight();
         }
-        if(handbrakePTI.buttonPressed){
-          CancelInvoke("DecelerateCar");
-          deceleratingCar = false;
-          Handbrake();
-        }
-        if(!handbrakePTI.buttonPressed){
-          RecoverTraction();
-        }
         if((!throttlePTI.buttonPressed && !reversePTI.buttonPressed)){
           ThrottleOff();
         }
-        if((!reversePTI.buttonPressed && !throttlePTI.buttonPressed) && !handbrakePTI.buttonPressed && !deceleratingCar){
+        if((!reversePTI.buttonPressed && !throttlePTI.buttonPressed) && !deceleratingCar){
           InvokeRepeating("DecelerateCar", 0f, 0.1f);
           deceleratingCar = true;
         }
@@ -343,11 +331,6 @@ public class PrometeoCarController : MonoBehaviour
         }
         if(Input.GetKey(KeyCode.D)){
           TurnRight();
-        }
-        if(Input.GetKey(KeyCode.Space)){
-          CancelInvoke("DecelerateCar");
-          deceleratingCar = false;
-          Handbrake();
         }
         if(Input.GetKeyUp(KeyCode.Space)){
           RecoverTraction();

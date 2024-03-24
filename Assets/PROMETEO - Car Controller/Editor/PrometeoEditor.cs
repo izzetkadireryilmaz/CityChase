@@ -238,7 +238,6 @@ public class PrometeoEditor : Editor{
         EditorGUILayout.PropertyField(reverseButton, new GUIContent("Brakes/Reverse Button: "));
         EditorGUILayout.PropertyField(turnLeftButton, new GUIContent("Turn Left Button: "));
         EditorGUILayout.PropertyField(turnRightButton, new GUIContent("Turn Right Button: "));
-        EditorGUILayout.PropertyField(handbrakeButton, new GUIContent("Handbrake Button: "));
 
     EditorGUILayout.EndToggleGroup();
 

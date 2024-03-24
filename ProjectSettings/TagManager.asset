@@ -3,7 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - "TarsusG\xF6revYeri"
+  - "MersinG\xF6revYeri"
+  - "MarketG\xF6revYeri"
+  - "OtelG\xF6revYeri"
+  - "KarakolG\xF6revYeri"
+  - "ArabaG\xF6revYeri"
+  - "TamirG\xF6revYeri"
+  - "BankaG\xF6revYeri"
+  - "\u0130\u015FMerkeziG\xF6revYeri"
+  - "Tarsus\u0130\u015FMerkeziG\xF6revYeri"
   layers:
   - Default
   - TransparentFX
