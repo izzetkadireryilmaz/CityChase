@@ -2,9 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class ButtonScript : MonoBehaviour
 {
+    public int Altýn;
+    public Text AltýnText;
     public GameObject Player;
     public GameObject TarsusGörev;
     public GameObject MersinGörev;
@@ -26,6 +31,20 @@ public class ButtonScript : MonoBehaviour
     public GameObject BankaGörevAçýklama;
     public GameObject ÝþMerkeziGörevAçýklama;
 
+
+    void Start()
+    {
+        if (PlayerPrefs.HasKey("Altýn"))
+        {
+            Altýn = PlayerPrefs.GetInt("Altýn");
+            AltýnText.text = Altýn.ToString() + " Altýn";
+        }
+        else
+        {
+            PlayerPrefs.SetInt("Altýn", 0);
+            AltýnText.text = PlayerPrefs.GetInt("Altýn").ToString() + " Altýn";
+        }
+    }
     public void TarsusGörevButton()
     {
         TarsusGörevAçýklama.SetActive(true);
@@ -70,47 +89,74 @@ public class ButtonScript : MonoBehaviour
         {
             GörevTeslimButton.SetActive(false);
             MersinGörevAçýklama.SetActive(false);
+            Altýn += 10;
+            PlayerPrefs.SetInt("Altýn", Altýn);
+            AltýnText.text = Altýn.ToString();
         }
 
         else if (TarsusGörevAçýklama.activeSelf)
         {
             GörevTeslimButton.SetActive(false);
             TarsusGörevAçýklama.SetActive(false);
+            Altýn += 10;
+            PlayerPrefs.SetInt("Altýn", Altýn);
+            AltýnText.text = Altýn.ToString();
         }
         else if (OtelGörevAçýklama.activeSelf)
         {
             GörevTeslimButton.SetActive(false);
             OtelGörevAçýklama.SetActive(false);
+            Altýn += 10;
+            PlayerPrefs.SetInt("Altýn", Altýn);
+            AltýnText.text = Altýn.ToString();
         }
         else if (MarketGörevAçýklama.activeSelf)
         {
             GörevTeslimButton.SetActive(false);
             MarketGörevAçýklama.SetActive(false);
+            Altýn += 10;
+            PlayerPrefs.SetInt("Altýn", Altýn);
+            AltýnText.text = Altýn.ToString();
         }
         else if (KarakolGörevAçýklama.activeSelf)
         {
             GörevTeslimButton.SetActive(false);
             KarakolGörevAçýklama.SetActive(false);
+            Altýn += 10;
+            PlayerPrefs.SetInt("Altýn", Altýn);
+            AltýnText.text = Altýn.ToString();
         }
         else if (ArabaGörevAçýklama.activeSelf)
         {
             GörevTeslimButton.SetActive(false);
             ArabaGörevAçýklama.SetActive(false);
+            Altýn += 10;
+            PlayerPrefs.SetInt("Altýn", Altýn);
+            AltýnText.text = Altýn.ToString();
         }
         else if (TamirGörevAçýklama.activeSelf)
         {
             GörevTeslimButton.SetActive(false);
             TamirGörevAçýklama.SetActive(false);
+            Altýn += 10;
+            PlayerPrefs.SetInt("Altýn", Altýn);
+            AltýnText.text = Altýn.ToString();
         }
         else if (BankaGörevAçýklama.activeSelf)
         {
             GörevTeslimButton.SetActive(false);
             BankaGörevAçýklama.SetActive(false);
+            Altýn += 10;
+            PlayerPrefs.SetInt("Altýn", Altýn);
+            AltýnText.text = Altýn.ToString();
         }
         else if (ÝþMerkeziGörevAçýklama.activeSelf)
         {
             GörevTeslimButton.SetActive(false);
             ÝþMerkeziGörevAçýklama.SetActive(false);
+            Altýn += 10;
+            PlayerPrefs.SetInt("Altýn", Altýn);
+            AltýnText.text = Altýn.ToString();
         }
     }
 }
