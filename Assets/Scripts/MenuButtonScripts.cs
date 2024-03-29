@@ -11,6 +11,7 @@ public class MenuButtonScripts : MonoBehaviour
     public void YeniOyun()
     {
         PlayerPrefs.SetInt("Altýn", 0);
+        PlayerPrefs.SetInt("Þöhret", 0);
         PlayerPrefs.Save();
     }
 

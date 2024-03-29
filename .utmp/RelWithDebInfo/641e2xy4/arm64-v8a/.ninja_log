@@ -1,21 +1,21 @@
 # ninja log v5
-38	259	7330160363153915	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	93ee89b6d6c461dc
-8	1423	7330160374732878	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	613b8d2ac1b7df19
-260	620	7330160366270172	C:/Users/izzet/City Chase/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/641e2xy4/obj/arm64-v8a/libswappywrapper.so	96c0440d2ac49040
-12	1067	7330160371162948	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	816a8158c05a27af
-28	1021	7330160370730022	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	df931ba1be0015b0
-23	1061	7330160371157842	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	a82855ea8791cae3
-15	1190	7330160372453712	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	81208ab26fb391e2
-33	1142	7330160371884310	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	61a8a41010f27e5b
-19	1340	7330160373915943	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	23d750ef4fc2c24d
-1423	1577	7330160375847203	C:/Users/izzet/City Chase/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/641e2xy4/obj/arm64-v8a/libgame.so	5b2aa1f7dc12a4d2
 59	409	7331430218864640	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	93ee89b6d6c461dc
-410	829	7331430222335554	C:/Users/izzet/City Chase/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/641e2xy4/obj/arm64-v8a/libswappywrapper.so	96c0440d2ac49040
-51	1781	7331430232504303	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	df931ba1be0015b0
-37	1827	7331430233034299	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	a82855ea8791cae3
-11	1855	7331430233305374	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	816a8158c05a27af
-45	1955	7331430234307022	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	61a8a41010f27e5b
-30	2035	7331430235088773	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	81208ab26fb391e2
-21	2233	7331430237049955	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	23d750ef4fc2c24d
 5	2355	7331430238153283	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	613b8d2ac1b7df19
+410	829	7331430222335554	C:/Users/izzet/City Chase/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/641e2xy4/obj/arm64-v8a/libswappywrapper.so	96c0440d2ac49040
+11	1855	7331430233305374	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	816a8158c05a27af
+51	1781	7331430232504303	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	df931ba1be0015b0
+30	2035	7331430235088773	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	81208ab26fb391e2
+37	1827	7331430233034299	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	a82855ea8791cae3
+45	1955	7331430234307022	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	61a8a41010f27e5b
+21	2233	7331430237049955	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	23d750ef4fc2c24d
 2355	2556	7331430239716748	C:/Users/izzet/City Chase/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/641e2xy4/obj/arm64-v8a/libgame.so	5b2aa1f7dc12a4d2
+38	254	7334147656998362	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	93ee89b6d6c461dc
+255	522	7334147659197216	C:/Users/izzet/City Chase/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/641e2xy4/obj/arm64-v8a/libswappywrapper.so	96c0440d2ac49040
+34	1020	7334147664605877	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	df931ba1be0015b0
+29	1065	7334147665094624	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	a82855ea8791cae3
+19	1084	7334147665245622	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	816a8158c05a27af
+24	1154	7334147665936205	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	61a8a41010f27e5b
+9	1211	7334147666596368	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	81208ab26fb391e2
+13	1403	7334147668480878	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	23d750ef4fc2c24d
+4	1450	7334147668963090	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	613b8d2ac1b7df19
+1451	1574	7334147669841482	C:/Users/izzet/City Chase/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/641e2xy4/obj/arm64-v8a/libgame.so	5b2aa1f7dc12a4d2

@@ -10,6 +10,8 @@ public class ButtonScript : MonoBehaviour
 {
     public int Altýn;
     public Text AltýnText;
+    public int Þöhret;
+    public Text ÞöhretText;
     public GameObject Player;
     public GameObject TarsusGörev;
     public GameObject MersinGörev;
@@ -37,12 +39,23 @@ public class ButtonScript : MonoBehaviour
         if (PlayerPrefs.HasKey("Altýn"))
         {
             Altýn = PlayerPrefs.GetInt("Altýn");
-            AltýnText.text = Altýn.ToString() + " Altýn";
+            AltýnText.text = Altýn.ToString();
         }
         else
         {
             PlayerPrefs.SetInt("Altýn", 0);
-            AltýnText.text = PlayerPrefs.GetInt("Altýn").ToString() + " Altýn";
+            AltýnText.text = PlayerPrefs.GetInt("Altýn").ToString();
+        }
+
+        if (PlayerPrefs.HasKey("Þöhret"))
+        {
+            Þöhret = PlayerPrefs.GetInt("Þöhret");
+            ÞöhretText.text = Þöhret.ToString();
+        }
+        else
+        {
+            PlayerPrefs.SetInt("Þöhret", 0);
+            ÞöhretText.text = PlayerPrefs.GetInt("Þöhret").ToString();
         }
     }
     public void TarsusGörevButton()
@@ -92,6 +105,9 @@ public class ButtonScript : MonoBehaviour
             Altýn += 10;
             PlayerPrefs.SetInt("Altýn", Altýn);
             AltýnText.text = Altýn.ToString();
+            Þöhret += 1;
+            PlayerPrefs.SetInt("Þöhret", Þöhret);
+            ÞöhretText.text = Þöhret.ToString();
         }
 
         else if (TarsusGörevAçýklama.activeSelf)
@@ -101,6 +117,9 @@ public class ButtonScript : MonoBehaviour
             Altýn += 10;
             PlayerPrefs.SetInt("Altýn", Altýn);
             AltýnText.text = Altýn.ToString();
+            Þöhret += 1;
+            PlayerPrefs.SetInt("Þöhret", Þöhret);
+            ÞöhretText.text = Þöhret.ToString();
         }
         else if (OtelGörevAçýklama.activeSelf)
         {
@@ -109,6 +128,9 @@ public class ButtonScript : MonoBehaviour
             Altýn += 10;
             PlayerPrefs.SetInt("Altýn", Altýn);
             AltýnText.text = Altýn.ToString();
+            Þöhret += 1;
+            PlayerPrefs.SetInt("Þöhret", Þöhret);
+            ÞöhretText.text = Þöhret.ToString();
         }
         else if (MarketGörevAçýklama.activeSelf)
         {
@@ -117,6 +139,9 @@ public class ButtonScript : MonoBehaviour
             Altýn += 10;
             PlayerPrefs.SetInt("Altýn", Altýn);
             AltýnText.text = Altýn.ToString();
+            Þöhret += 1;
+            PlayerPrefs.SetInt("Þöhret", Þöhret);
+            ÞöhretText.text = Þöhret.ToString();
         }
         else if (KarakolGörevAçýklama.activeSelf)
         {
@@ -125,6 +150,9 @@ public class ButtonScript : MonoBehaviour
             Altýn += 10;
             PlayerPrefs.SetInt("Altýn", Altýn);
             AltýnText.text = Altýn.ToString();
+            Þöhret += 1;
+            PlayerPrefs.SetInt("Þöhret", Þöhret);
+            ÞöhretText.text = Þöhret.ToString();
         }
         else if (ArabaGörevAçýklama.activeSelf)
         {
@@ -133,6 +161,9 @@ public class ButtonScript : MonoBehaviour
             Altýn += 10;
             PlayerPrefs.SetInt("Altýn", Altýn);
             AltýnText.text = Altýn.ToString();
+            Þöhret += 1;
+            PlayerPrefs.SetInt("Þöhret", Þöhret);
+            ÞöhretText.text = Þöhret.ToString();
         }
         else if (TamirGörevAçýklama.activeSelf)
         {
@@ -141,6 +172,9 @@ public class ButtonScript : MonoBehaviour
             Altýn += 10;
             PlayerPrefs.SetInt("Altýn", Altýn);
             AltýnText.text = Altýn.ToString();
+            Þöhret += 1;
+            PlayerPrefs.SetInt("Þöhret", Þöhret);
+            ÞöhretText.text = Þöhret.ToString();
         }
         else if (BankaGörevAçýklama.activeSelf)
         {
@@ -149,6 +183,9 @@ public class ButtonScript : MonoBehaviour
             Altýn += 10;
             PlayerPrefs.SetInt("Altýn", Altýn);
             AltýnText.text = Altýn.ToString();
+            Þöhret += 1;
+            PlayerPrefs.SetInt("Þöhret", Þöhret);
+            ÞöhretText.text = Þöhret.ToString();
         }
         else if (ÝþMerkeziGörevAçýklama.activeSelf)
         {
@@ -157,6 +194,9 @@ public class ButtonScript : MonoBehaviour
             Altýn += 10;
             PlayerPrefs.SetInt("Altýn", Altýn);
             AltýnText.text = Altýn.ToString();
+            Þöhret += 1;
+            PlayerPrefs.SetInt("Þöhret", Þöhret);
+            ÞöhretText.text = Þöhret.ToString();
         }
     }
 }
