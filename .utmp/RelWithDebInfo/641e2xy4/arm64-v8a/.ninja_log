@@ -1,21 +1,21 @@
 # ninja log v5
-59	409	7331430218864640	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	93ee89b6d6c461dc
-5	2355	7331430238153283	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	613b8d2ac1b7df19
-410	829	7331430222335554	C:/Users/izzet/City Chase/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/641e2xy4/obj/arm64-v8a/libswappywrapper.so	96c0440d2ac49040
-11	1855	7331430233305374	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	816a8158c05a27af
-51	1781	7331430232504303	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	df931ba1be0015b0
-30	2035	7331430235088773	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	81208ab26fb391e2
-37	1827	7331430233034299	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	a82855ea8791cae3
-45	1955	7331430234307022	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	61a8a41010f27e5b
-21	2233	7331430237049955	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	23d750ef4fc2c24d
-2355	2556	7331430239716748	C:/Users/izzet/City Chase/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/641e2xy4/obj/arm64-v8a/libgame.so	5b2aa1f7dc12a4d2
-38	254	7334147656998362	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	93ee89b6d6c461dc
-255	522	7334147659197216	C:/Users/izzet/City Chase/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/641e2xy4/obj/arm64-v8a/libswappywrapper.so	96c0440d2ac49040
-34	1020	7334147664605877	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	df931ba1be0015b0
-29	1065	7334147665094624	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	a82855ea8791cae3
-19	1084	7334147665245622	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	816a8158c05a27af
-24	1154	7334147665936205	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	61a8a41010f27e5b
-9	1211	7334147666596368	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	81208ab26fb391e2
-13	1403	7334147668480878	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	23d750ef4fc2c24d
-4	1450	7334147668963090	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	613b8d2ac1b7df19
-1451	1574	7334147669841482	C:/Users/izzet/City Chase/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/641e2xy4/obj/arm64-v8a/libgame.so	5b2aa1f7dc12a4d2
+69	327	7334445093646549	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	93ee89b6d6c461dc
+4	2010	7334445110464509	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	613b8d2ac1b7df19
+328	601	7334445096015269	C:/Users/izzet/City Chase/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/641e2xy4/obj/arm64-v8a/libswappywrapper.so	96c0440d2ac49040
+22	1686	7334445107183921	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	816a8158c05a27af
+62	1601	7334445106342382	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	df931ba1be0015b0
+26	1768	7334445108054806	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	81208ab26fb391e2
+51	1659	7334445106916372	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	a82855ea8791cae3
+65	1742	7334445107712179	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	61a8a41010f27e5b
+16	1931	7334445109693128	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	23d750ef4fc2c24d
+2010	2137	7334445111345263	C:/Users/izzet/City Chase/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/641e2xy4/obj/arm64-v8a/libgame.so	5b2aa1f7dc12a4d2
+37	275	7334951626636527	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	93ee89b6d6c461dc
+276	555	7334951629021751	C:/Users/izzet/City Chase/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/641e2xy4/obj/arm64-v8a/libswappywrapper.so	96c0440d2ac49040
+26	1155	7334951635380841	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	df931ba1be0015b0
+21	1216	7334951636025852	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	a82855ea8791cae3
+17	1217	7334951636050921	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	816a8158c05a27af
+32	1287	7334951636665820	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	61a8a41010f27e5b
+8	1346	7334951637396642	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	81208ab26fb391e2
+13	1542	7334951639338295	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	23d750ef4fc2c24d
+3	1573	7334951639625065	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	613b8d2ac1b7df19
+1574	1712	7334951640588259	C:/Users/izzet/City Chase/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/641e2xy4/obj/arm64-v8a/libgame.so	5b2aa1f7dc12a4d2

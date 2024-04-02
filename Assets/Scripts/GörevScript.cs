@@ -33,6 +33,8 @@ public class GörevScript : MonoBehaviour
     public GameObject BankaGörevYeri;
     public GameObject İşMerkeziGörevYeri;
     public GameObject TarsusİşMerkeziGörevYeri;
+    public GameObject YarışKabul;
+    public GameObject YarışCollider;
 
 
     private void OnTriggerEnter(Collider other)
@@ -138,6 +140,16 @@ public class GörevScript : MonoBehaviour
                 GörevTeslim.SetActive(true);
             }
         }
+        if (other.gameObject.tag == "YarışKabulYeri")
+        {
+            YarışKabul.SetActive(true);
+        }
+        if (other.gameObject.tag == "PistAşağısı")
+        {
+            YarışCollider.SetActive(false);
+            transform.position = new Vector3(255,0,60);
+            transform.rotation = new Quaternion(0,0,0,0);
+        }
 
     }
     private void OnTriggerExit(Collider other)
@@ -188,6 +200,10 @@ public class GörevScript : MonoBehaviour
         if (other.gameObject.tag == "TarsusİşMerkeziGörevYeri")
         {
             GörevTeslim.SetActive(false);
+        }
+        if(other.gameObject.tag == "YarışKabulYeri")
+        {
+            YarışKabul.SetActive(false);
         }
 
     }

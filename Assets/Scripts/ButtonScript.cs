@@ -32,6 +32,9 @@ public class ButtonScript : MonoBehaviour
     public GameObject TamirGörevAçýklama;
     public GameObject BankaGörevAçýklama;
     public GameObject ÝþMerkeziGörevAçýklama;
+    public GameObject YarýþKabul;
+    public GameObject yetersiz;
+    public GameObject Yarýþcollider;
 
 
     void Start()
@@ -93,6 +96,25 @@ public class ButtonScript : MonoBehaviour
     public void ÝþMerkeziGörevButton()
     {
         ÝþMerkeziGörevAçýklama.SetActive(true);
+    }
+    public void YarýþKabulButton()
+    {
+        if(Altýn >= 5 && Þöhret >= 1)
+        {
+            Player.transform.position = new Vector3(123, 2.8f, 526);
+            Yarýþcollider.SetActive(true);
+
+        }
+        else
+        {
+            yetersiz.SetActive(true);
+            YarýþKabul.SetActive(false);
+        }
+    }
+    public void YetersizKapat()
+    {
+
+        yetersiz.SetActive(false);
     }
 
 
