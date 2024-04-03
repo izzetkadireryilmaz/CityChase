@@ -35,6 +35,7 @@ public class ButtonScript : MonoBehaviour
     public GameObject YarýþKabul;
     public GameObject yetersiz;
     public GameObject Yarýþcollider;
+    public GameObject kazandýnýz;
 
 
     void Start()
@@ -99,10 +100,16 @@ public class ButtonScript : MonoBehaviour
     }
     public void YarýþKabulButton()
     {
-        if(Altýn >= 5 && Þöhret >= 1)
+        if(Altýn >= 10 && Þöhret >= 1)
         {
             Player.transform.position = new Vector3(123, 2.8f, 526);
             Yarýþcollider.SetActive(true);
+            Altýn -= 10;
+            PlayerPrefs.SetInt("Altýn", Altýn);
+            AltýnText.text = Altýn.ToString();
+            Þöhret -= 1;
+            PlayerPrefs.SetInt("Þöhret", Þöhret);
+            ÞöhretText.text = Þöhret.ToString();
 
         }
         else
@@ -116,7 +123,16 @@ public class ButtonScript : MonoBehaviour
 
         yetersiz.SetActive(false);
     }
-
+    public void kazandýnýzButon()
+    {
+        kazandýnýz.SetActive(false);
+        Altýn += 20;
+        PlayerPrefs.SetInt("Altýn", Altýn);
+        AltýnText.text = Altýn.ToString();
+        Þöhret += 2;
+        PlayerPrefs.SetInt("Þöhret", Þöhret);
+        ÞöhretText.text = Þöhret.ToString();
+    }
 
     public void GörevTeslim()
     {

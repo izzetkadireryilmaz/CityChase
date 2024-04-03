@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class GörevScript : MonoBehaviour
 {
@@ -35,7 +38,37 @@ public class GörevScript : MonoBehaviour
     public GameObject TarsusİşMerkeziGörevYeri;
     public GameObject YarışKabul;
     public GameObject YarışCollider;
+    [SerializeField] TextMeshProUGUI timerText;
+    public float GecenSure;
+    public bool yarista;
+    public GameObject kazandınız;
 
+    private void Start()
+    {
+        timerText.gameObject.SetActive(false);
+        yarista = false;
+    }
+    void Update()
+    {
+        GecenSure += Time.deltaTime;
+        int minutes = Mathf.FloorToInt(GecenSure / 60);
+        int seconds = Mathf.FloorToInt(GecenSure % 60);
+        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+
+        if(GecenSure > 110)
+        {   
+            GecenSure = 0;
+
+            if (yarista == true)
+            {
+                transform.position = new Vector3(255, 0, 60);
+                transform.rotation = new Quaternion(0, 0, 0, 0);
+                yarista = false;
+                timerText.gameObject.SetActive(false);
+            }
+        }
+
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -147,8 +180,26 @@ public class GörevScript : MonoBehaviour
         if (other.gameObject.tag == "PistAşağısı")
         {
             YarışCollider.SetActive(false);
+            yarista = false;
+            timerText.gameObject.SetActive(false);
             transform.position = new Vector3(255,0,60);
             transform.rotation = new Quaternion(0,0,0,0);
+        }
+        if (other.gameObject.tag == "YarışBaşlangıç")
+        {
+            yarista = true;
+            timerText.gameObject.SetActive(true);
+            GecenSure = 0;
+            Update();
+        }
+        if (other.gameObject.tag == "YarışBitiş")
+        {
+            yarista = false;
+            timerText.gameObject.SetActive(false);
+            GecenSure = 0;
+            transform.position = new Vector3(255, 0, 60);
+            transform.rotation = new Quaternion(0, 0, 0, 0);
+            kazandınız.SetActive(true);
         }
 
     }
