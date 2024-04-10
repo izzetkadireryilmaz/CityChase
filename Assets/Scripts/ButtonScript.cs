@@ -13,7 +13,7 @@ public class ButtonScript : MonoBehaviour
     public Text AltýnText;
     public int Þöhret;
     public Text ÞöhretText;
-    private int maxSpeed;
+    public int maxSpeed;
     public GameObject Player;
     public GameObject TarsusGörev;
     public GameObject MersinGörev;
@@ -38,6 +38,9 @@ public class ButtonScript : MonoBehaviour
     public GameObject yetersiz;
     public GameObject Yarýþcollider;
     public GameObject kazandýnýz;
+    public GameObject arabayükseltme70;
+    public GameObject arabayükseltme80;
+    public GameObject yukseltmeyetersiz;
     public GameObject ayarlaraç;
     public GameObject ayarlarkapat;
     public GameObject menu;
@@ -74,7 +77,8 @@ public class ButtonScript : MonoBehaviour
 
         if (PlayerPrefs.HasKey("maxSpeed"))
         {
-            maxSpeed = PlayerPrefs.GetInt("maxSpeed");
+            PrometeoCarController cr = Player.GetComponent<PrometeoCarController>();
+            cr.maxSpeed = PlayerPrefs.GetInt("maxSpeed");
         }
         else
         {
@@ -139,8 +143,8 @@ public class ButtonScript : MonoBehaviour
     }
     public void YetersizKapat()
     {
-
         yetersiz.SetActive(false);
+        yukseltmeyetersiz.SetActive(false);
     }
     public void kazandýnýzButon()
     {
@@ -154,15 +158,31 @@ public class ButtonScript : MonoBehaviour
     }
     public void Araba70()
     {
-        PrometeoCarController cr = Player.GetComponent<PrometeoCarController>();
-        maxSpeed = cr.maxSpeed = 80;
-        PlayerPrefs.SetInt("maxSpeed", maxSpeed);
+        if(Altýn >= 30 && Þöhret >= 5)
+        {
+             PrometeoCarController cr = Player.GetComponent<PrometeoCarController>();
+             cr.maxSpeed = 80;
+             PlayerPrefs.SetInt("maxSpeed", cr.maxSpeed);
+        }
+        else
+        {
+             arabayükseltme70.SetActive(false);
+             yukseltmeyetersiz.SetActive(true);
+        }
     }
     public void Araba80()
     {
-        PrometeoCarController cr = Player.GetComponent<PrometeoCarController>();
-        maxSpeed = cr.maxSpeed = 90;
-        PlayerPrefs.SetInt("maxSpeed", maxSpeed);
+        if(Altýn >= 60 && Þöhret >= 9)
+        {
+            PrometeoCarController cr = Player.GetComponent<PrometeoCarController>();
+            cr.maxSpeed = 90;
+            PlayerPrefs.SetInt("maxSpeed", cr.maxSpeed);
+        }
+        else
+        {
+            arabayükseltme80.SetActive(false);
+            yukseltmeyetersiz.SetActive(true);
+        }
     }
     public void AyarlarButton()
     {

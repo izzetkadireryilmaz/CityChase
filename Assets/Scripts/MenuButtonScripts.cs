@@ -12,6 +12,7 @@ public class MenuButtonScripts : MonoBehaviour
     {
         PlayerPrefs.SetInt("Altýn", 0);
         PlayerPrefs.SetInt("Þöhret", 0);
+        PlayerPrefs.SetInt("maxSpeed", 70);
         PlayerPrefs.Save();
     }
 

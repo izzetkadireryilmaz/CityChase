@@ -270,6 +270,11 @@ public class GörevScript : MonoBehaviour
         {
             YarışKabul.SetActive(false);
         }
+        if (other.gameObject.tag == "ArabaGüçlendirme")
+        {
+            ArabaGüçlendirme70.SetActive(false);
+            ArabaGüçlendirme80.SetActive(false);
+        }
 
     }
 }
