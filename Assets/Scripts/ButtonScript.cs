@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Timeline;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 
@@ -12,6 +13,7 @@ public class ButtonScript : MonoBehaviour
     public Text AltýnText;
     public int Þöhret;
     public Text ÞöhretText;
+    private int maxSpeed;
     public GameObject Player;
     public GameObject TarsusGörev;
     public GameObject MersinGörev;
@@ -36,7 +38,15 @@ public class ButtonScript : MonoBehaviour
     public GameObject yetersiz;
     public GameObject Yarýþcollider;
     public GameObject kazandýnýz;
-
+    public GameObject ayarlaraç;
+    public GameObject ayarlarkapat;
+    public GameObject menu;
+    public GameObject sound;
+    public GameObject soundmute;
+    public GameObject music;
+    public GameObject musicmute;
+    public GameObject GameMusic;
+    public GameObject CarSound;
 
     void Start()
     {
@@ -60,6 +70,15 @@ public class ButtonScript : MonoBehaviour
         {
             PlayerPrefs.SetInt("Þöhret", 0);
             ÞöhretText.text = PlayerPrefs.GetInt("Þöhret").ToString();
+        }
+
+        if (PlayerPrefs.HasKey("maxSpeed"))
+        {
+            maxSpeed = PlayerPrefs.GetInt("maxSpeed");
+        }
+        else
+        {
+            PlayerPrefs.SetInt("maxSpeed", 0);
         }
     }
     public void TarsusGörevButton()
@@ -133,6 +152,92 @@ public class ButtonScript : MonoBehaviour
         PlayerPrefs.SetInt("Þöhret", Þöhret);
         ÞöhretText.text = Þöhret.ToString();
     }
+    public void Araba70()
+    {
+        PrometeoCarController cr = Player.GetComponent<PrometeoCarController>();
+        maxSpeed = cr.maxSpeed = 80;
+        PlayerPrefs.SetInt("maxSpeed", maxSpeed);
+    }
+    public void Araba80()
+    {
+        PrometeoCarController cr = Player.GetComponent<PrometeoCarController>();
+        maxSpeed = cr.maxSpeed = 90;
+        PlayerPrefs.SetInt("maxSpeed", maxSpeed);
+    }
+    public void AyarlarButton()
+    {
+        ayarlaraç.SetActive(false);
+        ayarlarkapat.SetActive(true);
+        if (GameMusic.gameObject.activeSelf)
+        {
+            menu.SetActive(true);
+            musicmute.SetActive(false);
+            music.SetActive(true);
+            if (CarSound.gameObject.activeSelf)
+            {
+                soundmute.SetActive(false);
+                sound.SetActive(true);
+            }
+            else
+            {
+                sound.SetActive(false);
+                soundmute.SetActive(true);
+            }
+        }
+        else
+        {
+            menu.SetActive(true);
+            music.SetActive(false);
+            musicmute.SetActive(true);
+            if (CarSound.gameObject.activeSelf)
+            {
+                sound.SetActive(true);
+            }
+            else
+            {
+                soundmute.SetActive(true);
+            }
+        }
+    }
+    public void AyarlarKapatButon()
+    {
+        ayarlaraç.SetActive(true);
+        ayarlarkapat.SetActive(false);  
+        menu.SetActive(false);
+        sound.SetActive(false);
+        music.SetActive(false);
+        soundmute.SetActive(false);
+        musicmute.SetActive(false);
+    }
+    public void SoundButton()
+    {
+        CarSound.SetActive(false);
+        sound.SetActive(false);
+        soundmute.SetActive(true);
+    }
+    public void SoundMuteButton()
+    {
+        CarSound.SetActive(true);
+        sound.SetActive(true);
+        soundmute.SetActive(false);
+    }
+    public void MusicButon()
+    {
+        GameMusic.SetActive(false);
+        music.SetActive(false);
+        musicmute.SetActive(true);
+    }
+    public void MusicMuteButon()
+    {
+        GameMusic.SetActive(true);
+        music.SetActive(true);
+        musicmute.SetActive(false);
+    }
+    public void MenuButon()
+    {
+        SceneManager.LoadScene(0);
+    }
+
 
     public void GörevTeslim()
     {

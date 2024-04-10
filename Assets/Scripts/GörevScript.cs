@@ -42,6 +42,8 @@ public class GörevScript : MonoBehaviour
     public float GecenSure;
     public bool yarista;
     public GameObject kazandınız;
+    public GameObject ArabaGüçlendirme70;
+    public GameObject ArabaGüçlendirme80;
 
     private void Start()
     {
@@ -200,6 +202,18 @@ public class GörevScript : MonoBehaviour
             transform.position = new Vector3(255, 0, 60);
             transform.rotation = new Quaternion(0, 0, 0, 0);
             kazandınız.SetActive(true);
+        }
+        if (other.gameObject.tag == "ArabaGüçlendirme")
+        {
+            PrometeoCarController cr = GetComponent<PrometeoCarController>();
+            if (cr.maxSpeed == 70)
+            {
+                ArabaGüçlendirme70.SetActive(true);
+            }
+            if (cr.maxSpeed == 80)
+            {
+                ArabaGüçlendirme80.SetActive(true);
+            }
         }
 
     }
