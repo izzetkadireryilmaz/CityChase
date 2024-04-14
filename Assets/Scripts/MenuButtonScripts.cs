@@ -8,6 +8,8 @@ public class MenuButtonScripts : MonoBehaviour
 {
     public GameObject YeniOyunEkraný;
     public GameObject MenuButon;
+    public GameObject MenuCanvas;
+    public GameObject StoryCanvas;
     public void YeniOyun()
     {
         PlayerPrefs.SetInt("Altýn", 0);
@@ -33,12 +35,25 @@ public class MenuButtonScripts : MonoBehaviour
 
     public void Kabul()
     {
-        SceneManager.LoadScene(1);
+        StoryCanvas.SetActive(true);
+        MenuCanvas.SetActive(false);
         YeniOyun();
     }
     public void Ret()
     {
         YeniOyunEkraný.SetActive(false);
         MenuButon.SetActive(true);
+    }
+
+    void Update()
+    {
+        StartCoroutine(Baslangic());
+    }
+
+    IEnumerator Baslangic()
+    {
+        yield return new WaitForSeconds(50f);
+        SceneManager.LoadScene(1);
+        StoryCanvas.SetActive(false);
     }
 }

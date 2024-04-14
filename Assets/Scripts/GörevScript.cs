@@ -40,15 +40,29 @@ public class GörevScript : MonoBehaviour
     public GameObject YarışCollider;
     [SerializeField] TextMeshProUGUI timerText;
     public float GecenSure;
-    public bool yarista;
-    public GameObject kazandınız;
+    public bool yarista80;
+    public bool yarista90;
+    public bool yarista110;
+    public GameObject YarışBaşlangıç80;
+    public GameObject YarışBaşlangıç90;
+    public GameObject YarışBaşlangıç110;
+    public GameObject YarışBitiş80;
+    public GameObject YarışBitiş90;
+    public GameObject YarışBitiş110;
+    public GameObject kazandınız80;
+    public GameObject kazandınız90;
+    public GameObject kazandınız110;
     public GameObject ArabaGüçlendirme70;
     public GameObject ArabaGüçlendirme80;
-
+    public GameObject ArabaGüçlendirme90;
+    public GameObject ArabaGüçlendirme100;
+    
     private void Start()
     {
         timerText.gameObject.SetActive(false);
-        yarista = false;
+        yarista80 = false;
+        yarista90 = false;
+        yarista110 = false;
     }
     void Update()
     {
@@ -57,17 +71,36 @@ public class GörevScript : MonoBehaviour
         int seconds = Mathf.FloorToInt(GecenSure % 60);
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
 
-        if(GecenSure > 110)
+        if (GecenSure > 200)
+        {
+            GecenSure = 0;
+        }
+
+        if (GecenSure > 180 && yarista80 == true)
+        {
+            GecenSure = 0;
+            transform.position = new Vector3(255, 0, 60);
+            transform.rotation = new Quaternion(0, 0, 0, 0);
+            yarista80 = false;
+            timerText.gameObject.SetActive(false);
+        }
+
+        if (GecenSure > 160 && yarista90 == true)
+        {
+            GecenSure = 0;
+            transform.position = new Vector3(255, 0, 60);
+            transform.rotation = new Quaternion(0, 0, 0, 0);
+            yarista90 = false;
+            timerText.gameObject.SetActive(false);
+        }
+
+        if (GecenSure > 110 && yarista110 == true)
         {   
             GecenSure = 0;
-
-            if (yarista == true)
-            {
-                transform.position = new Vector3(255, 0, 60);
-                transform.rotation = new Quaternion(0, 0, 0, 0);
-                yarista = false;
-                timerText.gameObject.SetActive(false);
-            }
+            transform.position = new Vector3(255, 0, 60);
+            transform.rotation = new Quaternion(0, 0, 0, 0);
+            yarista110 = false;
+            timerText.gameObject.SetActive(false);
         }
 
     }
@@ -182,26 +215,66 @@ public class GörevScript : MonoBehaviour
         if (other.gameObject.tag == "PistAşağısı")
         {
             YarışCollider.SetActive(false);
-            yarista = false;
+            yarista80 = false;
+            yarista90 = false;
+            yarista110 = false;
             timerText.gameObject.SetActive(false);
             transform.position = new Vector3(255,0,60);
             transform.rotation = new Quaternion(0,0,0,0);
         }
-        if (other.gameObject.tag == "YarışBaşlangıç")
+        if (other.gameObject.tag == "YarışBaşlangıç80")
         {
-            yarista = true;
+            yarista80 = true;
             timerText.gameObject.SetActive(true);
             GecenSure = 0;
             Update();
         }
-        if (other.gameObject.tag == "YarışBitiş")
+        if (other.gameObject.tag == "YarışBaşlangıç90")
         {
-            yarista = false;
+            yarista90 = true;
+            timerText.gameObject.SetActive(true);
+            GecenSure = 0;
+            Update();
+        }
+        if (other.gameObject.tag == "YarışBaşlangıç110")
+        {
+            yarista110 = true;
+            timerText.gameObject.SetActive(true);
+            GecenSure = 0;
+            Update();
+        }
+        if (other.gameObject.tag == "YarışBitiş80")
+        {
+            yarista80 = false;
             timerText.gameObject.SetActive(false);
             GecenSure = 0;
             transform.position = new Vector3(255, 0, 60);
             transform.rotation = new Quaternion(0, 0, 0, 0);
-            kazandınız.SetActive(true);
+            kazandınız80.SetActive(true);
+            YarışBaşlangıç80.SetActive(false);
+            YarışBitiş80.SetActive(false);
+        }
+        if (other.gameObject.tag == "YarışBitiş90")
+        {
+            yarista90 = false;
+            timerText.gameObject.SetActive(false);
+            GecenSure = 0;
+            transform.position = new Vector3(255, 0, 60);
+            transform.rotation = new Quaternion(0, 0, 0, 0);
+            kazandınız90.SetActive(true);
+            YarışBaşlangıç90.SetActive(false);
+            YarışBitiş90.SetActive(false);
+        }
+        if (other.gameObject.tag == "YarışBitiş110")
+        {
+            yarista110 = false;
+            timerText.gameObject.SetActive(false);
+            GecenSure = 0;
+            transform.position = new Vector3(255, 0, 60);
+            transform.rotation = new Quaternion(0, 0, 0, 0);
+            kazandınız110.SetActive(true);
+            YarışBaşlangıç110.SetActive(false);
+            YarışBitiş110.SetActive(false);
         }
         if (other.gameObject.tag == "ArabaGüçlendirme")
         {
@@ -213,6 +286,14 @@ public class GörevScript : MonoBehaviour
             if (cr.maxSpeed == 80)
             {
                 ArabaGüçlendirme80.SetActive(true);
+            }
+            if (cr.maxSpeed == 90)
+            {
+                ArabaGüçlendirme90.SetActive(true);
+            }
+            if (cr.maxSpeed == 100)
+            {
+                ArabaGüçlendirme100.SetActive(true);
             }
         }
 

@@ -15,11 +15,15 @@ TagManager:
   - "\u0130\u015FMerkeziG\xF6revYeri"
   - "Tarsus\u0130\u015FMerkeziG\xF6revYeri"
   - "ArabaG\xFC\xE7lendirme"
-  - "Yar\u0131\u015FBa\u015Flang\u0131\xE7"
-  - "Yar\u0131\u015FBiti\u015F"
   - "PistA\u015Fa\u011F\u0131s\u0131"
   - "Yar\u0131\u015FKabulYeri"
   - "Yar\u0131\u015FPist"
+  - "Yar\u0131\u015FBa\u015Flang\u0131\xE780"
+  - "Yar\u0131\u015FBa\u015Flang\u0131\xE790"
+  - "Yar\u0131\u015FBa\u015Flang\u0131\xE7110"
+  - "Yar\u0131\u015FBiti\u015F80"
+  - "Yar\u0131\u015FBiti\u015F90"
+  - "Yari\u015FBiti\u015F110"
   layers:
   - Default
   - TransparentFX
