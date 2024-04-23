@@ -36,6 +36,7 @@ public class ButtonScript : MonoBehaviour
     public GameObject BankaGörevAçýklama;
     public GameObject ÝþMerkeziGörevAçýklama;
     public GameObject ArabaGörevYolGöstergesi;
+    public GameObject TarsusGörevYolGöstergesi;
     public GameObject YarýþKabul;
     public GameObject yetersiz;
     public GameObject YarýþBaþlangýç80;
@@ -126,6 +127,7 @@ public class ButtonScript : MonoBehaviour
     }
     public void TarsusGörevButton()
     {
+        TarsusGörevYolGöstergesi.SetActive(true);
         TarsusGörevAçýklama.SetActive(true);
         GörevYerleri.Remove(MersinGörevYeri);
         for (int i = 0; i < 9; i++)
@@ -578,6 +580,7 @@ public class ButtonScript : MonoBehaviour
         {
             GörevTeslimButton.SetActive(false);
             TarsusGörevAçýklama.SetActive(false);
+            TarsusGörevYolGöstergesi.SetActive(false);
             Altýn += 10;
             PlayerPrefs.SetInt("Altýn", Altýn);
             AltýnText.text = Altýn.ToString();
